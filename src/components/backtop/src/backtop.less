@@ -1,0 +1,25 @@
+@import "../../base.less";
+
+.@{css-prefix} {
+    &-backtop {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 999;
+
+        &-inlay {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #fff;
+            box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.23);
+
+            &:after {
+                font-family: @iconfont-inlay;
+                content: '\E788';
+                font-size: 20px;
+                color: #C0C0C0;
+            }
+        }
+    }
+}

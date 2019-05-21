@@ -1,0 +1,45 @@
+@import "../../../assets/styles/variable.less";
+
+.container {
+    width: 1200px;
+    position: relative;
+    margin-top: 30px;
+
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    .navs {
+        width: 234px;
+        background: #fff;
+        float: left;
+        padding-bottom: 50px;
+
+        .item {
+            display: block;
+            text-align: center;
+            height: 56px;
+            line-height: 56px;
+            font-size: 14px;
+            color: #666;
+            border-left: 2px solid transparent;
+            transition: all ease .3s;
+
+            &:hover,
+            &.active {
+                background: rgba(236, 84, 20, .2);
+                border-left: 2px solid @main-color;
+                color: @main-color;
+            }
+        }
+    }
+
+    .content {
+        float: right;
+        width: 946px;
+        background: #fff;
+        overflow: hidden;
+    }
+}

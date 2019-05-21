@@ -1,0 +1,89 @@
+//颜色变量
+@main-color: #EC5413; //项目主题色
+//尺寸变量
+@public-topvar-height: 44px; //公共头部高度
+@public-navbar-height: 49px; //公共底部高度
+@public-topbar-index: 999;   //固定顶部栏zindex值
+
+// 多行文本溢出显示省略号
+.line-clamp(@line: 2, @line-height: 18px) {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: @line;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  line-height: @line-height;
+  max-height: @line-height * @line + 10rem;
+}
+
+// 单行文本溢出显示省略号
+.text-overflow(@align: justify) {
+  word-wrap: normal;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: @align;
+}
+
+.background-cover {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.top-line(@color, @line: solid, @zindex: 0) {
+    content: '';
+    position: absolute;
+    z-index: @zindex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-top: 1px @line @color;
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+.bottom-line(@color, @line: solid, @zindex: 0) {
+    content: '';
+    position: absolute;
+    z-index: @zindex;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px @line @color;
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+.left-line(@color, @line: solid, @zindex: 0) {
+    content: '';
+    position: absolute;
+    z-index: @zindex;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-left: 1px @line @color;
+    -webkit-transform: scaleX(.5);
+    transform: scaleX(.5);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+.right-line(@color, @line: solid, @zindex: 0) {
+    content: '';
+    position: absolute;
+    z-index: @zindex;
+    top: 0;
+    right: 0;
+    height: 100%;
+    border-right: 1px @line @color;
+    -webkit-transform: scaleX(.5);
+    transform: scaleX(.5);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
